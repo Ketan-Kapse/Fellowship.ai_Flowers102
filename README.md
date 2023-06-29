@@ -38,6 +38,16 @@ The final model contains approx. 24.77M parameters of which 1.2M are trainable.
 
 The input training images are subject to transformations such as random rotations, flips, etc. before they are fed to the network in batches of size 32. These augmentations improve the diversity of the dataset, reducing overfitting and improving generalization on the test set.
 
+```
+data_augmentation = tf.keras.Sequential([
+  tf.keras.layers.RandomFlip("horizontal_and_vertical"),
+  tf.keras.layers.RandomRotation(0.4),
+  tf.keras.layers.Resizing(224, 224),
+  tf.keras.layers.Rescaling(1./255)
+])
+
+```
+
 Next, the model was trained for 45 epochs with callbacks like ReduceLROnPlateau and ModelCheckpoints being implemented.
 
 ## Results
