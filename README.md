@@ -16,10 +16,6 @@ The problem statement requires the development of a DNN that is capable of class
 
 3. Different Image Sizes: The images in the dataset are of different dimensions, with some images being larger than the others. This requires resizing of all the images in the dataset to a uniform dimension before they are fed to the network.
 
-    ![height](https://github.com/Ketan-Kapse/Felloship.ai_Flowers102/assets/47895059/caf76300-631b-4c66-98ee-2d69fb0ce321)![width](https://github.com/Ketan-Kapse/Felloship.ai_Flowers102/assets/47895059/434113d7-4f18-424e-98f8-826f66d349ba)
-
-
-
 
 ## Approach
 
