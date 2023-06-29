@@ -24,7 +24,9 @@ The problem statement requires the development of a DNN that is capable of class
 ## Approach
 
 1. Preparing the Data: The data was split for train, test and validation in the manner of a train/test/dev set with the split being .75:.15:.15 respectively. The main motive behind splitting the data is to ensure that the model generalizes well on unseen data and not just on the trainining data.
-2. Initializing the neural network: According to the problem statement, a ResNet50 model was initialized with weights from imagenet so that relevant features can be extracted from the train data.
+2. Initializing The Network: According to the problem statement, a ResNet50 model was initialized with weights from imagenet so that relevant features can be extracted from the train data.
+3. Training: I conducted training for the model using a specific set of data and carefully observed how well it performed on a separate set of validation data. To enhance the model's ability to generalize and avoid overfitting, I applied various methods like data augmentation, feature scaling, and regularization.
+4. Evaluation: Post training, the plots for training and validation accuracy and loss were examined for any signs of overfitting after which the model was tested on the test set.
 
 ## Model Architecture and Training
 For this dataset, the ResNet50V2 architecture pretrained on the imagenet database is used. Custom fully connected and dropout layers have been added on top of the resnet architecture to improve network complexity. Furthermore, the resnet layers are frozen so as to avoid retraining them again. 
