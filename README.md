@@ -24,8 +24,11 @@ The problem statement requires the development of a DNN that is capable of class
 ## Approach
 
 1. Preparing the Data: The data was split for train, test and validation in the manner of a train/test/dev set with the split being .75:.15:.15 respectively. The main motive behind splitting the data is to ensure that the model generalizes well on unseen data and not just on the trainining data.
+
 2. Initializing The Network: According to the problem statement, a ResNet50 model was initialized with weights from imagenet so that relevant features can be extracted from the train data.
+
 3. Training: I conducted training for the model using a specific set of data and carefully observed how well it performed on a separate set of validation data. To enhance the model's ability to generalize and avoid overfitting, I applied various methods like data augmentation, feature scaling, and regularization.
+
 4. Evaluation: Post training, the plots for training and validation accuracy and loss were examined for any signs of overfitting after which the model was tested on the test set.
 
 ## Model Architecture and Training
@@ -62,4 +65,5 @@ This model demonstrates an accuracy of ~91% on the training set and ~88% on the 
 ## Further Improvements
 While this model demonstrates satisfactory results, they can be further improved with the following considerations:
 1. Increasing the size of the data: The flowers 102 dataset is small, and further expansion of the dataset with the addition of more images can help improve performance.
+
 2. Fine Tuning and Using Different Models: Further study of the hyperparameter tuning like LR and regularization can help improve the model's performance. Additionally, experimentation with different architectures such as VGGs or MobileNets can lead to the discovery of better performance. Also, the usage of more complex ResNet architectures like ResNet101 or ResNet 152 can lead to better feature recognition, increasing accuracy.
